@@ -23,7 +23,7 @@ After instalation run this command:
 # Features
 
 - Bootstrap 5.3.1
-  = Bootstrap icons
+- Bootstrap icons
 - Parcel.js
 - TypeScript
 - Sass
