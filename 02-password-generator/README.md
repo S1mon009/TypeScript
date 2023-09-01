@@ -42,3 +42,7 @@ After instalation run this command:
 August 30, 2023
 
 - Initial release
+
+September 01, 2023
+
+- Added password validation

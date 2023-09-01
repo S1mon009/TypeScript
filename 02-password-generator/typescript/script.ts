@@ -1,7 +1,8 @@
 const password = document.querySelector(".password") as HTMLInputElement;
 const checboxes = document.querySelectorAll<HTMLInputElement>(".checkbox");
-const passwordLenght =
+const passwordLenghtInput =
   document.querySelector<HTMLInputElement>(".password-length");
+const lenghtText = document.querySelector(".length") as HTMLDivElement;
 const btnGenerate = document.querySelector<HTMLButtonElement>(".btn-generate");
 const btnCopy = document.querySelector<HTMLButtonElement>(".btn-copy");
 const icon = document.querySelector("i") as HTMLElement;
@@ -25,6 +26,7 @@ let options: Options = {
   elements: ["a-z", "A-Z", "0-9", "!-@"],
   length: 15,
 };
+
 function generatePassword(): string {
   if (options.elements.length === 0) {
     return "You must select at least one option!";
@@ -60,35 +62,42 @@ function generatePassword(): string {
     password.push(character);
   }
 
-  if (checkPassword(password.join(""))) {
-    return password.join("");
-  }
-  if (!checkPassword(password.join(""))) {
-    generatePassword();
-  }
+  if (checkPassword(password.join(""), chooseChars)) return password.join("");
+  if (!checkPassword(password.join(""), chooseChars)) generatePassword();
 
-  return "Your password";
+  return "";
 }
-function checkPassword(temporaryPassword: string): boolean {
+function checkPassword(password: string, chooseChars: string[]): boolean {
   let conditions: boolean[] = [];
 
-  if (temporaryPassword.match(/[a-z]/g)) {
-    conditions.push(true);
-  }
-  if (temporaryPassword.match(/[A-Z]/g)) {
-    conditions.push(true);
-  }
-  if (temporaryPassword.match(/[0-9]/g)) {
-    conditions.push(true);
-  }
-  if (temporaryPassword.match(/[^\w ]/g)) {
-    conditions.push(true);
-  }
-  if (conditions.every((conditionsElement) => conditionsElement === true)) {
+  chooseChars.forEach((element) => {
+    switch (element) {
+      case chars.az:
+        password.match(/[a-z]/g)
+          ? conditions.push(true)
+          : conditions.push(false);
+        break;
+      case chars.AZ:
+        password.match(/[A-Z]/g)
+          ? conditions.push(true)
+          : conditions.push(false);
+        break;
+      case chars.numbers:
+        password.match(/[0-9]/g)
+          ? conditions.push(true)
+          : conditions.push(false);
+        break;
+      case chars.special:
+        password.match(/[^/w]/g)
+          ? conditions.push(true)
+          : conditions.push(false);
+        break;
+    }
+  });
+
+  if (conditions.every((elementCondition) => elementCondition === true))
     return true;
-  } else {
-    return false;
-  }
+  else return false;
 }
 async function copyText(text: string) {
   try {
@@ -111,16 +120,14 @@ checboxes.forEach((checbox: HTMLInputElement, index: number) => {
     password.value = generatePassword();
   });
 });
-
-passwordLenght?.addEventListener("input", function () {
+passwordLenghtInput?.addEventListener("input", function () {
   options.length = +this.value;
+  lenghtText.innerHTML = `Length: ${this.value}`;
   password.value = generatePassword();
 });
-
 btnGenerate?.addEventListener("click", function () {
   password.value = generatePassword();
 });
-
 btnCopy?.addEventListener("click", function () {
   icon.className = "bi bi-check-lg";
   copyText(password.value);
