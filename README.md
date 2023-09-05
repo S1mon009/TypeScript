@@ -29,3 +29,4 @@
 ###
 # 🔗Live Demo
 - [01-tabs](https://01-tabs.netlify.app)
+- [02-password-generator](https://02-password-generator.netlify.app)
