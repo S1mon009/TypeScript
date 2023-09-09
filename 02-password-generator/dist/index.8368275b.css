@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body img {
+  width: 50px;
+  top: 20px;
+  left: 20px;
+}
+
+body .password-container {
+  border: 2px solid #e7ebf0;
+  width: 400px;
+  padding: 10px;
+}
+
+body .password-container input[type="text"] {
+  border: 2px solid #e7ebf0;
+  padding: 10px 50px 10px 20px;
+  font-size: 18px;
+  display: block;
+}
+
+body .password-container input[type="text"]:focus {
+  outline: none;
+}
+
+body .password-container .btn-copy {
+  transform: translate(-20px, 17px);
+}
+
+body .password-container .option-container {
+  margin-top: 40px;
+}
+
+body .password-container .option-container:nth-child(2) {
+  padding: 0 10px;
+}
+
+body .password-container .option-container:nth-child(2) input[type="checkbox"] {
+  appearance: none;
+  font: inherit;
+  border: 2px solid;
+  border-radius: 4px;
+  place-content: center;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-.075em);
+}
+
+body .password-container .option-container:nth-child(2) input[type="checkbox"]:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  transition: transform .1s ease-in-out;
+  transform: scale(0);
+  box-shadow: inset 10px 10px #277fd5;
+}
+
+body .password-container .option-container:nth-child(2) input[type="checkbox"]:checked:before {
+  transform: scale(1);
+}
+
+body .password-container .option-container:nth-child(2) label {
+  transform: translate(30px, -32px);
+}
+
+body .password-container .option-container:before {
+  content: "";
+  background: #e7ebf0;
+  width: calc(100% - 30px);
+  height: 2px;
+  position: absolute;
+  top: -25px;
+  left: 15px;
+}
+
+body .password-container .option-container input {
+  cursor: pointer;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+body .password-container .option-container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: #fff;
+  border: 3px solid #277fd5;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+}
+
+body .password-container .option-container input[type="range"]::-webkit-slider-runnable-track {
+  cursor: pointer;
+  background: #277fd5;
+  border-radius: 5px;
+  width: 100%;
+  height: 4px;
+}
+
+body .password-container .option-container .length {
+  transform: translateY(6px);
+}
+
+body .password-container .option-container button {
+  color: #fff;
+  background: #277fd5;
+  border: none;
+  outline: none;
+  height: 50px;
+}
+
+@media (width <= 450px) {
+  body .password-container {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=index.8368275b.css.map */
