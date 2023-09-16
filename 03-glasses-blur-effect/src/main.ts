@@ -10,7 +10,7 @@ const App = document.querySelector<HTMLDivElement>("#app");
 
 App!.innerHTML = `
 <img
-src="./src/images/logo-white.svg"
+src="/logo-white.svg"
 alt="Logo"
 class="position-absolute"
 />
