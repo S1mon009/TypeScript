@@ -1,5 +1,5 @@
 export const setGlassesMove = (element: HTMLDivElement) => {
-  const moveGlasses = (event: any) => {
+  const moveGlasses = (event: MouseEvent) => {
     let x = event.clientX - element.clientWidth / 2;
     let y = event.clientY - element.clientHeight / 2;
 
