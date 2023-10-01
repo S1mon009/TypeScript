@@ -1,0 +1,113 @@
+$border-color: #e7ebf0;
+$text-color: #333;
+$button-background-color: #277fd5;
+$button-text-color: #fff;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  img {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+  }
+  .password-container {
+    width: 400px;
+    padding: 10px;
+    border: 2px solid $border-color;
+    input[type="text"] {
+      display: block;
+      padding: 10px 50px 10px 20px;
+      font-size: 18px;
+      border: 2px solid $border-color;
+      &:focus {
+        outline: none;
+      }
+    }
+    .btn-copy {
+      transform: translate(-20px, 17px);
+    }
+    .option-container {
+      margin-top: 40px;
+      &:nth-child(2) {
+        padding: 0 10px;
+        input[type="checkbox"] {
+          -webkit-appearance: none;
+          appearance: none;
+          place-content: center;
+          font: inherit;
+          width: 20px;
+          height: 20px;
+          border: 2px solid currentColor;
+          border-radius: 4px;
+          transform: translateY(-0.075em);
+
+          &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            transform: scale(0);
+            transition: 0.1s transform ease-in-out;
+            box-shadow: inset 10px 10px $button-background-color;
+          }
+          &:checked::before {
+            transform: scale(1);
+          }
+        }
+        label {
+          transform: translate(30px, -32px);
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        left: 15px;
+        top: -25px;
+        width: calc(100% - 30px);
+        height: 2px;
+        background: $border-color;
+      }
+      input {
+        height: 40px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &[type="range"] {
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: 3px solid $button-background-color;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: #fff;
+            margin-top: -7px;
+          }
+          &::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            border-radius: 5px;
+            background: $button-background-color;
+          }
+        }
+      }
+      .length {
+        transform: translateY(6px);
+      }
+      button {
+        height: 50px;
+        border: none;
+        outline: none;
+        background: $button-background-color;
+        color: $button-text-color;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    .password-container {
+      width: 90%;
+    }
+  }
+}

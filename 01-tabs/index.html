@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script
+      defer
+      src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
+    <link rel="stylesheet" href="scss/style.scss" />
+    <link rel="icon" href="images/logo-white.svg" />
+    <script defer src="typescript/script.ts"></script>
+    <title>Tabs</title>
+  </head>
+  <body>
+    <img src="images/logo-black.svg" alt="Logo" class="position-absolute" />
+    <div
+      class="position-absolute top-50 start-50 translate-middle tabs-container"
+    >
+      <div class="d-flex w-100 btn-container">
+        <button class="position-relative bg-transparent border-0 active">
+          HTML
+        </button>
+        <button class="position-relative bg-transparent border-0">Sass</button>
+        <button class="position-relative bg-transparent border-0">
+          TypeScript
+        </button>
+      </div>
+      <div class="w-100 tab-data">
+        The HyperText Markup Language or HTML is the standard markup language
+        for documents designed to be displayed in a web browser. It defines the
+        meaning and structure of web content. It is often assisted by
+        technologies such as Cascading Style Sheets (CSS) and scripting
+        languages such as JavaScript.
+      </div>
+      <div class="w-100 tab-data d-none">
+        Sass (short for syntactically awesome style sheets) is a preprocessor
+        scripting language that is interpreted or compiled into Cascading Style
+        Sheets (CSS). SassScript is the scripting language itself.
+      </div>
+      <div class="w-100 tab-data d-none">
+        TypeScript is a free and open-source high-level programming language
+        developed by Microsoft that adds static typing with optional type
+        annotations to JavaScript. It is designed for the development of large
+        applications and transpiles to JavaScript.[5] Because TypeScript is a
+        superset of JavaScript, all JavaScript programs are syntactically valid
+        TypeScript, but they can fail to type-check for safety reasons.
+      </div>
+    </div>
+  </body>
+</html>

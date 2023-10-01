@@ -1,0 +1,70 @@
+$background-blur-color: rgba(255, 255, 255, 0.1);
+$glass-border-color: rgba(255, 255, 255, 0.85);
+
+body {
+  background: url("/public/paris.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  img {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    z-index: 1;
+  }
+  .background-blur {
+    backdrop-filter: blur(20px);
+    background: $background-blur-color;
+  }
+  .glasses {
+    width: 540px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      border: 4px solid transparent;
+      border-top: 4px solid $glass-border-color;
+    }
+    .glass-1,
+    .glass-2 {
+      width: 250px;
+      aspect-ratio: 1/1;
+      border: 4px solid $glass-border-color;
+      border-radius: 50%;
+      background: url("/public/paris.jpg");
+      background-position: center;
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+  }
+  @media (max-width: 700px) {
+    .glasses {
+      width: 340px;
+      &::before {
+        width: 80px;
+      }
+      .glass-1,
+      .glass-2 {
+        width: 150px;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .glasses {
+      width: 240px;
+      &::before {
+        top: 60%;
+        width: 70px;
+      }
+      .glass-1,
+      .glass-2 {
+        width: 100px;
+      }
+    }
+  }
+}

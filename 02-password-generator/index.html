@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+    <script
+      defer
+      src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
+    <link rel="stylesheet" href="scss/style.scss" />
+    <link rel="icon" href="images/logo-white.svg" />
+    <script defer src="typescript/script.ts"></script>
+    <title>Password generator</title>
+  </head>
+  <body>
+    <img src="images/logo-black.svg" alt="Logo" class="position-absolute" />
+    <div
+      class="position-absolute top-50 start-50 translate-middle password-container"
+    >
+      <div class="w-100">
+        <input
+          type="text"
+          value="Your password"
+          readonly
+          class="w-100 password"
+        />
+        <button class="position-absolute top-0 end-0 btn btn-copy">
+          <i class="bi bi-clipboard"></i>
+        </button>
+      </div>
+      <div class="row position-relative option-container">
+        <div class="col">
+          <input
+            type="checkbox"
+            data-option="a-z"
+            class="d-grid checkbox"
+            id="a-z"
+            checked
+          />
+          <label for="a-z" class="position-absolute">a-z</label>
+        </div>
+        <div class="col">
+          <input
+            type="checkbox"
+            data-option="A-Z"
+            class="d-grid checkbox"
+            id="A-Z"
+            checked
+          />
+          <label for="A-Z" class="position-absolute">A-Z</label>
+        </div>
+        <div class="col">
+          <input
+            type="checkbox"
+            data-option="0-9"
+            class="d-grid checkbox"
+            id="0-9"
+            checked
+          />
+          <label for="0-9" class="position-absolute">0-9</label>
+        </div>
+        <div class="col">
+          <input
+            type="checkbox"
+            data-option="!-@"
+            class="d-grid checkbox"
+            id="!-@"
+            checked
+          />
+          <label for="!-@" class="position-absolute">!-@</label>
+        </div>
+      </div>
+      <div class="row position-relative option-container">
+        <div class="col-8">
+          <div class="input-group flex-nowrap">
+            <input
+              class="w-100 form-control password-length"
+              aria-label="Pick color"
+              aria-describedby="addon-wrapping"
+              type="range"
+              min="8"
+              max="30"
+              step="1"
+              value="15"
+            />
+          </div>
+        </div>
+        <div class="col-4 length">Lenght: 15</div>
+      </div>
+      <div class="row position-relative option-container">
+        <div class="col">
+          <button class="w-100 fs-5 btn-generate">Generate</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
