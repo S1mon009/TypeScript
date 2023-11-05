@@ -32,3 +32,4 @@
 - [02-password-generator](https://02-password-generator.netlify.app)
 - [03-glasses-blur-effect](https://03-glasses-blur-effect.netlify.app)
 - [04-slider](https://04-slider.netlify.app)
+- [05-calculator](https://05-calculator.netlify.app)
