@@ -8,6 +8,31 @@ $not-active-button: #666;
 }
 body {
   background: $body-background-color;
+  .thumbnails {
+    display: flex;
+    margin: 1rem auto 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .thumbnail {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0.2rem;
+    cursor: pointer;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: auto;
+  }
+  .swiper {
+    width: 300px;
+    height: 100px;
+    color: #fff;
+  }
   .gallery {
     width: 600px;
     height: 400px;
