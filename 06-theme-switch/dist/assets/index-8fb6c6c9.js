@@ -1,0 +1,7 @@
+(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))c(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&c(s)}).observe(document,{childList:!0,subtree:!0});function i(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function c(e){if(e.ep)return;e.ep=!0;const t=i(e);fetch(e.href,t)}})();const n="/assets/logo-black-2d42fc7d.svg",l="/assets/logo-white-bd6cace0.svg";function d(o,r){o.addEventListener("change",()=>{o.checked?(document.documentElement.classList.add("dark"),r.src=l):(document.documentElement.classList.remove("dark"),r.src=n)})}document.querySelector("#app").innerHTML=`
+  <img src=${n} alt="Logo" class="absolute top-3 left-3 w-14"/>
+  <div class="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-28 rounded-full border-8 border-slate-800 p-2 duration-300 dark:border-white dark:bg-indigo-500">
+      <span class="absolute left-2 duration-300 block w-20 h-20 rounded-full bg-slate-800 dark:translate-x-36 dark:bg-white"></span>
+      <input type="checkbox" class="w-64 h-28 rounded-full opacity-0 cursor-pointer"/>
+  </div>
+`;d(document.querySelector("input"),document.querySelector("img"));

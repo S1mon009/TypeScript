@@ -1,0 +1,94 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/variables";
+
+$body-background-color: #242424;
+$button-background-color: rgba(255, 255, 255, 0.6);
+$button-background-color-hover: rgba(255, 255, 255, 1);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: $body-background-color;
+  .logo {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+  }
+  .slider {
+    width: 800px;
+    aspect-ratio: 16/9;
+    -webkit-box-shadow: 8px 8px 24px 0px $black;
+    -moz-box-shadow: 8px 8px 24px 0px $black;
+    box-shadow: 8px 8px 24px 0px $black;
+    overflow: hidden;
+    .slide {
+      transition: transform 1s;
+    }
+    .slider-btn {
+      z-index: 10;
+      border: none;
+      font-family: inherit;
+      font-size: 3.25rem;
+      color: $button-background-color;
+      background: transparent;
+      cursor: pointer;
+      transition: 0.3s all;
+      &.slider-btn-left {
+        left: 6%;
+        transform: translate(-50%, -50%);
+      }
+      &.slider-btn-right {
+        right: 6%;
+        transform: translate(50%, -50%);
+      }
+      &:hover {
+        color: $button-background-color-hover;
+      }
+    }
+    .dots {
+      bottom: 5%;
+      transform: translateX(-50%);
+      .dots-dot {
+        border: none;
+        background-color: $gray-100;
+        opacity: 0.7;
+        width: 1rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        margin-right: 1.75rem;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:last-child {
+          margin: 0;
+        }
+        &.dots-dot-active {
+          background-color: $gray-900;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @media (max-width: 810px) {
+    .slider {
+      width: 500px;
+    }
+  }
+  @media (max-width: 500px) {
+    .slider {
+      width: 90%;
+      .slider-btn {
+        font-size: 2.25rem;
+      }
+      .dots {
+        .dots-dot {
+          width: 0.7rem;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          margin-right: 1.3rem;
+        }
+      }
+    }
+  }
+}
