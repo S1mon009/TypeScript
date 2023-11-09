@@ -14,4 +14,3 @@ setupTheme(
   document.querySelector<HTMLInputElement>("input"),
   document.querySelector<HTMLImageElement>("img")
 );
-// setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
