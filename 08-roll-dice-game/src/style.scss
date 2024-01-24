@@ -1,0 +1,53 @@
+@import "./colors";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  background: $body-background-color;
+  .logo {
+    top: 20px;
+    left: 20px;
+    width: 50px;
+  }
+  .game-area {
+    width: clamp(300px, 1000px, 1200px);
+    height: 70%;
+    background: $game-area-background-color;
+    .left-side,
+    .right-side {
+      opacity: 0.7;
+      transition: 0.3s all;
+    }
+    .active-player {
+      opacity: 1;
+      background: $active-player-background-color;
+    }
+    .player-name {
+      font-size: 4rem;
+    }
+    .score {
+      font-size: 5rem;
+      transform: translateY(-80px);
+      color: $primary-text-color;
+    }
+    .current-score {
+      .current-score-box {
+        padding: 40px 70px;
+        transform: translateY(-30px);
+        color: $secendary-text-color;
+        background: $primary-text-color;
+      }
+    }
+    .action-buttons {
+      width: 200px;
+      .dice {
+        img {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
