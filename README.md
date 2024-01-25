@@ -35,3 +35,4 @@
 - [05-calculator](https://05-calculator.netlify.app)
 - [06-theme-switch](https://06-theme-switch.netlify.app)
 - [07-rating-star](https://07-rating-star.netlify.app)
+- [08-roll-dice-game](https://08-roll-dice-game.netlify.app)
