@@ -1,3 +1,4 @@
+<a href="https://app.daily.dev/s1mon009"><img src="https://api.daily.dev/devcards/v2/QbIZWZ9QjwEON8mzmbenI.png?type=wide&r=e1g" width="652" alt="Szymon Skałecki's Dev Card"/></a>
 # Stats
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=S1mon009&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
