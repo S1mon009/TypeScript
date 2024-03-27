@@ -7,34 +7,34 @@ body {
   background-attachment: fixed;
   overflow: hidden;
   img {
-    top: 20px;
-    left: 20px;
-    width: 50px;
+    top: 1.25rem;
+    left: 1.25rem;
+    width: 3.125rem;
     z-index: 1;
   }
   .background-blur {
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(1.25rem);
     background: $background-blur-color;
   }
   .glasses {
-    width: 540px;
+    width: 33.75rem;
     &::before {
       position: absolute;
       content: "";
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 70px;
+      width: 4.375rem;
       aspect-ratio: 1/1;
       border-radius: 50%;
-      border: 4px solid transparent;
-      border-top: 4px solid $glass-border-color;
+      border: 0.25rem solid transparent;
+      border-top: 0.25rem solid $glass-border-color;
     }
     .glass-1,
     .glass-2 {
-      width: 250px;
+      width: 15.625rem;
       aspect-ratio: 1/1;
-      border: 4px solid $glass-border-color;
+      border: 0.25rem solid $glass-border-color;
       border-radius: 50%;
       background: url("/public/paris.jpg");
       background-position: center;
@@ -42,28 +42,28 @@ body {
       overflow: hidden;
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 43.75rem) {
     .glasses {
-      width: 340px;
+      width: 21.25rem;
       &::before {
-        width: 80px;
+        width: 5rem;
       }
       .glass-1,
       .glass-2 {
-        width: 150px;
+        width: 9.375rem;
       }
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 31.25rem) {
     .glasses {
-      width: 240px;
+      width: 15rem;
       &::before {
         top: 60%;
-        width: 70px;
+        width: 4.375rem;
       }
       .glass-1,
       .glass-2 {
-        width: 100px;
+        width: 6.25rem;
       }
     }
   }

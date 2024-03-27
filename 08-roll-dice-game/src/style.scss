@@ -8,12 +8,12 @@ body {
   font-family: "Nunito", sans-serif;
   background: $body-background-color;
   .logo {
-    top: 20px;
-    left: 20px;
-    width: 50px;
+    top: 1.25rem;
+    left: 1.25rem;
+    width: 3.125rem;
   }
   .game-area {
-    width: clamp(300px, 1000px, 1200px);
+    width: clamp(18.75rem, 62.5rem, 75rem);
     height: 70%;
     background: $game-area-background-color;
     .left-side,
@@ -26,26 +26,26 @@ body {
       background: $active-player-background-color;
     }
     .player-name {
-      font-size: 4rem;
+      font-size: 64px;
     }
     .score {
-      font-size: 5rem;
-      transform: translateY(-80px);
+      font-size: 80px;
+      transform: translateY(-5rem);
       color: $primary-text-color;
     }
     .current-score {
       .current-score-box {
-        padding: 40px 70px;
-        transform: translateY(-30px);
+        padding: 2.5rem 4.375rem;
+        transform: translateY(-1.875rem);
         color: $secendary-text-color;
         background: $primary-text-color;
       }
     }
     .action-buttons {
-      width: 200px;
+      width: 12.5rem;
       .dice {
         img {
-          width: 150px;
+          width: 9.375rem;
         }
       }
     }

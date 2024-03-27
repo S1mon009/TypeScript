@@ -8,21 +8,21 @@ $active-tab: #277fd5;
 }
 body {
   img {
-    top: 20px;
-    left: 20px;
-    width: 50px;
+    top: 1.25rem;
+    left: 1.25rem;
+    width: 3.125rem;
   }
   .tabs-container {
-    padding: 20px;
-    border: 2px solid $border-color;
-    border-radius: 5px;
+    padding: 1.25rem;
+    border: 0.125rem solid $border-color;
+    border-radius: 0.3125rem;
     .btn-container {
       font-weight: 500;
-      border-bottom: 2px solid $border-color;
+      border-bottom: 0.125rem solid $border-color;
       color: $text-color;
       button {
         width: 33%;
-        padding: 10px 0px;
+        padding: 0.625rem 0rem;
         outline: none;
         transition: 0.3s all;
         &:hover {
@@ -32,9 +32,9 @@ body {
           position: absolute;
           content: "";
           width: 100%;
-          height: 2px;
+          height: 0.125rem;
           left: 0;
-          bottom: -2px;
+          bottom: -0.125rem;
           background: none;
         }
         &.active {
@@ -46,14 +46,14 @@ body {
       }
     }
     .tab-data {
-      margin-top: 10px;
-      padding: 0 0 10px 0;
+      margin-top: 0.625rem;
+      padding: 0 0 0.625rem 0;
       &.d-none {
         display: none;
       }
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 43.75rem) {
     .tabs-container {
       width: 90%;
     }
